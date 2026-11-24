@@ -1,0 +1,92 @@
+{
+  "manifest_version": 3,
+  "name": "PinVault — Pinterest HD Image & Video Downloader",
+  "version": "2.2.0",
+  "description": "Hover over any Pinterest image, GIF, or video to download it at the highest available quality in one click.",
+  "permissions": [
+    "downloads",
+    "webRequest",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.pinterest.com/*",
+    "*://pinterest.com/*",
+    "*://*.pinterest.co.uk/*",
+    "*://*.pinterest.ca/*",
+    "*://*.pinterest.de/*",
+    "*://*.pinterest.fr/*",
+    "*://*.pinterest.es/*",
+    "*://*.pinterest.it/*",
+    "*://*.pinterest.jp/*",
+    "*://*.pinterest.com.au/*",
+    "*://*.pinterest.ph/*",
+    "*://*.pinterest.pt/*",
+    "*://*.pinterest.at/*",
+    "*://*.pinterest.ch/*",
+    "*://*.pinterest.cl/*",
+    "*://*.pinterest.co.kr/*",
+    "*://*.pinterest.com.mx/*",
+    "*://*.pinterest.dk/*",
+    "*://*.pinterest.ie/*",
+    "*://*.pinterest.nz/*",
+    "*://*.pinterest.ru/*",
+    "*://*.pinterest.se/*",
+    "*://*.pinterest.ro/*",
+    "*://*.pinterest.nl/*",
+    "*://*.pinterest.pl/*",
+    "*://*.pinterest.com.br/*",
+    "*://*.pinimg.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.pinterest.com/*",
+        "*://pinterest.com/*",
+        "*://*.pinterest.co.uk/*",
+        "*://*.pinterest.ca/*",
+        "*://*.pinterest.de/*",
+        "*://*.pinterest.fr/*",
+        "*://*.pinterest.es/*",
+        "*://*.pinterest.it/*",
+        "*://*.pinterest.jp/*",
+        "*://*.pinterest.com.au/*",
+        "*://*.pinterest.ph/*",
+        "*://*.pinterest.pt/*",
+        "*://*.pinterest.at/*",
+        "*://*.pinterest.ch/*",
+        "*://*.pinterest.cl/*",
+        "*://*.pinterest.co.kr/*",
+        "*://*.pinterest.com.mx/*",
+        "*://*.pinterest.dk/*",
+        "*://*.pinterest.ie/*",
+        "*://*.pinterest.nz/*",
+        "*://*.pinterest.ru/*",
+        "*://*.pinterest.se/*",
+        "*://*.pinterest.ro/*",
+        "*://*.pinterest.nl/*",
+        "*://*.pinterest.pl/*",
+        "*://*.pinterest.com.br/*"
+      ],
+      "css": ["styles.css"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "PinVault — Pinterest HD Downloader",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

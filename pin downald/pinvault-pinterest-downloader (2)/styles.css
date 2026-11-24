@@ -1,0 +1,98 @@
+/* PinVault v2.1 — Floating Hover Download Button & Toast Styles */
+
+#pinvault-floating-btn.pinvault-dl-btn {
+  position: fixed !important;
+  top: -9999px;
+  left: -9999px;
+  z-index: 2147483647 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  height: 36px !important;
+  padding: 0 14px !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: 999px !important;
+  background: rgba(17, 17, 17, 0.88) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  color: #ffffff !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+  letter-spacing: 0.01em !important;
+  cursor: pointer !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35) !important;
+  opacity: 0 !important;
+  transform: scale(0.95) !important;
+  pointer-events: none !important;
+  transition: opacity 0.14s ease, transform 0.14s ease, background-color 0.15s ease !important;
+}
+
+#pinvault-floating-btn.pinvault-dl-btn.pinvault-visible {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+  pointer-events: auto !important;
+}
+
+#pinvault-floating-btn.pinvault-dl-btn:hover {
+  background: #e60023 !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+}
+
+#pinvault-floating-btn.pinvault-dl-btn.pinvault-busy {
+  background: #2563eb !important;
+  cursor: wait !important;
+}
+
+#pinvault-floating-btn.pinvault-dl-btn.pinvault-done {
+  background: #16a34a !important;
+}
+
+#pinvault-floating-btn.pinvault-dl-btn.pinvault-err {
+  background: #dc2626 !important;
+}
+
+#pinvault-floating-btn.pinvault-dl-btn svg {
+  flex-shrink: 0 !important;
+  display: block !important;
+}
+
+@keyframes pinvault-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pinvault-spin {
+  animation: pinvault-rotate 0.8s linear infinite !important;
+}
+
+/* Toast notification */
+.pinvault-toast {
+  position: fixed !important;
+  bottom: 22px !important;
+  right: 22px !important;
+  z-index: 2147483647 !important;
+  padding: 11px 16px !important;
+  border-radius: 10px !important;
+  background: #111827 !important;
+  color: #ffffff !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.32) !important;
+  opacity: 0 !important;
+  transform: translateY(10px) !important;
+  pointer-events: none !important;
+  transition: opacity 0.2s ease, transform 0.2s ease !important;
+}
+
+.pinvault-toast.show {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.pinvault-toast-err {
+  background: #b91c1c !important;
+}
